@@ -1,5 +1,5 @@
 # Enumerables
-## The project to implement user defined Enumerable methods
+## This is the project to implement user defined Enumerable methods
 ##### using 
 * ruby
 ###  Author 
