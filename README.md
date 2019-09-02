@@ -1,6 +1,8 @@
 # Enumerables
 ## The project to implement user defined Enumerable methods
-* using
-##### ruby
+##### using 
+* ruby
 ###  Author 
+Salum Habibu https://github.com/IBUNHABIBU
 
+[ Live project ](https://repl.it/@IBUNHABIBU/Enumerables)
