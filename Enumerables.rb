@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 module Enumerable
  def my_each
    i = 0
@@ -9,7 +8,7 @@ module Enumerable
    end
  end
 
- def my_each_with_indeitem
+ def my_each_with_index
   i = 0
     result = []
     while i < size
@@ -62,7 +61,7 @@ module Enumerable
 end
 weekdays = %w[monday tuesday wednesday thursday]
 weekdays.my_each { |day| puts day.upcase }
-weekdays.my_each_with_indeitem { |day, item| puts "#{item}.#{day.upcase}" }
+weekdays.my_each_with_index { |day, item| puts "#{item}.#{day.upcase}" }
 
 def multiply_els(array)
   array.my_inject(4) { |item, n| item * n }
