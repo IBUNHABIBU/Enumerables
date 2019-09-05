@@ -2,10 +2,10 @@
 module Enumerable
  def my_each
    i = 0
-     while i < size
-       yield self[i]
-       i += 1
-   end
+    while i < size
+      yield self[i]
+      i += 1
+    end
  end
 
  def my_each_with_index
@@ -53,8 +53,8 @@ module Enumerable
     result
   end
 
-  def my_inject(_init = nil)
-    result = 0
+  def my_inject(init = 0)
+    result = init
     my_each { |item| result = yield(result, item) }
     result
   end
@@ -64,7 +64,9 @@ weekdays.my_each { |day| puts day.upcase }
 weekdays.my_each_with_index { |day, item| puts "#{item}.#{day.upcase}" }
 
 def multiply_els(array)
-  array.my_inject(4) { |item, n| item * n }
+  array.my_inject(1){ |prod, n| prod * n }
 end
 
-puts multiply_els([5, 7, 8, 2])
+puts multiply_els([2,3,4])
+
+puts [2,3,4].inject(0){|sum,item| sum+item}
