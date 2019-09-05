@@ -1,14 +1,15 @@
 # frozen_string_literal: true
+
 module Enumerable
- def my_each
-   i = 0
+  def my_each
+    i = 0
     while i < size
       yield self[i]
       i += 1
     end
- end
+  end
 
- def my_each_with_index
+  def my_each_with_index
   i = 0
     result = []
     while i < size
@@ -16,7 +17,7 @@ module Enumerable
       i += 1
     end
     result
- end
+  end
 
   def my_select
     result = []
