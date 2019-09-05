@@ -34,7 +34,7 @@ module Enumerable
     false
   end
 
-  def my_none
+  def my_none?
     my_each { |item| return false if yield item }
     true
   end
@@ -70,3 +70,11 @@ end
 puts multiply_els([2,3,4])
 
 puts [2,3,4].inject(0){|sum,item| sum+item}
+
+puts "Is  my_all? method meet condition? : #{[2,3,5,8,34].my_all?{|item| item>1}}"
+
+puts "Is  my_any? method meet contition? : #{[2,4,5,8,34].my_any?{|item| item<=2}}"
+
+puts "Is  my_none? method meet condition? :#{[2,4,5,8,34].my_none?{|item| item>91}}"
+
+puts "Is  all? method meet condition? :#{[2,4,5,8,34].all?{|item| item>1}}"
