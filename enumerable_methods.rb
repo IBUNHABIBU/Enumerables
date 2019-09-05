@@ -32,10 +32,13 @@ module Enumerable
   end
 
   def my_any?
-    if ! block_given?
-      return true
+    my_each do |item|
+      if block_given?
+        return true if yield item
+      else
+        return true if item
+      end
     end
-    my_each{|item| return true if yield item}
     false
   end
 
@@ -92,8 +95,8 @@ puts "Is  all? method meet the condition? :#{[2,4,6,5,34].all?{|item| item>1}}"
 
 puts "Is  any if no block_give? method meet the condition? :#{[nil,nil,nil,nil,nil].any?}"
 
-puts [false, false].all?
+puts "True ,false and nil my_any? #{[false, false,true,nil].my_any?}"
 
-puts [false, true,true].my_none?
+puts "when [True and nill] my_any? #{[nil, true,true].my_any?}"
 
-puts [false, nil, nil].my_none?
+puts "[All nill]my_any? #{[nil, nil, nil].my_any?}"
