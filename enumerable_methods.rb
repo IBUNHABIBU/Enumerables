@@ -10,7 +10,7 @@ module Enumerable
   end
 
   def my_each_with_index
-  i = 0
+    i = 0
     result = []
     while i < size
       result << yield(self[i], i)
