@@ -71,9 +71,9 @@ end
 
 puts multiply_els([2, 3, 4])
 
-puts [2, 3, 4].inject(0) { |sum,item| sum+item }
+puts [2, 3, 4].inject(0) { |sum, item| sum+item }
 
-puts "Is  my_all? method meet the condition? : #{[2, 3, 4, 8, 34].my_all?{|item| item>4}}"
+puts "Is  my_all? method meet the condition? : #{[2, 3, 4, 8, 34].my_all? { |item| item>4 }}"
 
 puts "Is  my_all when no block_given? method the meet condition? : #{[true, nil, 4, 8, 34].my_all?}"
 
