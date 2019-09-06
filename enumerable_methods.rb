@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 module Enumerable
   def my_each
     i = 0
@@ -26,18 +25,12 @@ module Enumerable
   end
 
   def my_all?
-      return false unless block_given?
-    my_each{ |item| return false unless yield item }
+    return false unless block_given?
+    my_each { |item| return false unless yield item }
   end
 
   def my_any?
-    my_each do |item|
-      if block_given?
-        return true if yield item
-      else
-        return true if item
-      end
-    end
+    my_each { |item| return true if block_given? ? yield(item) : item }
     false
   end
 
