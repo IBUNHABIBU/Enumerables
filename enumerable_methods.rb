@@ -101,4 +101,3 @@ puts "True ,false and nil my_any? #{[false, false, true, nil].my_any?}"
 puts "when [True and nill] my_any? #{[nil, true, true].my_any?}"
 
 puts "[All nill]my_any? #{[nil, nil, nil].my_any?}"
-
