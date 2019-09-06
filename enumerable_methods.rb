@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# frozen_string_literal: true 
 module Enumerable
   def my_each
     i = 0
@@ -25,8 +25,8 @@ module Enumerable
   end
 
   def my_all?
-    return false unless block_given?
-    my_each { |item| return false unless yield item }
+    return false unless block_given? 
+    my_each { |item| return false unless yield item } 
   end
 
   def my_any?
@@ -71,7 +71,7 @@ end
 
 puts multiply_els([2, 3, 4])
 
-puts [2, 3, 4].inject(0){|sum,item| sum+item}
+puts [2, 3, 4].inject(0) { |sum,item| sum+item }
 
 puts "Is  my_all? method meet the condition? : #{[2, 3, 4, 8, 34].my_all?{|item| item>4}}"
 
