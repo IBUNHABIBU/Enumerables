@@ -80,6 +80,3 @@ puts "Is  my_all when no block_given? method the meet condition? : #{[true, nil,
 puts "Is  my_any? method meet condition? : #{[2, 4, 5, 8, 12, 34].my_any? { |item| item==12 }}"
 
 puts "Is  my_any when no block_given? method meet the condition? : #{[nil, nil, true, nil, nil].my_any?}"
-
-puts "Is  my_none? method meet the condition? :#{[2, 4, 5, 8, 34].my_none? { |item| item > 91}}"
-
