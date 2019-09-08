@@ -49,7 +49,7 @@ module Enumerable
       if block_given?
         return false if yield item
       elsif
-        item return false
+        return false if item
       end
     end
     true
