@@ -61,7 +61,7 @@ module Enumerable
 
     length
   end
-  
+
   def my_map(&block)
     result = []
     my_each { |item| result << block.call(item) }
