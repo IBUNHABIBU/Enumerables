@@ -48,7 +48,7 @@ module Enumerable
     my_each { |item| return false if block_given? ? !yield(item) : item }
     true
   end
-
+  
   def my_count(arg = nil)
     return my_select { |item| yield(item) }.length if block_given?
     return my_select { |item| item == arg }.length unless arg.nil?
