@@ -48,7 +48,7 @@ module Enumerable
     my_each do |item|
       if block_given?
         return false if yield item
-      elsif
+      else
         return false if item
       end
     end
