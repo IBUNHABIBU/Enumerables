@@ -26,10 +26,17 @@ module Enumerable
     result
   end
 
-  def my_all?
-    return false unless block_given?
+  def my_all?(pattern = nil)
+    unless pattern.nil?
+      return false if instance_of?(Hash)
 
-    my_each { |item| return false unless yield item }
+      return my_all? { |item| pattern.match(item) }
+    end
+
+    return my_all? { |item| item } unless block_given?
+
+    my_each { |item| return false unless yield(item) }
+    true
   end
 
   def my_any?
@@ -38,20 +45,22 @@ module Enumerable
   end
 
   def my_none?
-    if block_given?
-      my_each { |item| return false if yield item }
+    my_each do |item|
+      if block_given?
+        return false if yield item
+      else
+      return false if item
+      end
     end
-    true
+  true
   end
 
   def my_count(arg = nil)
-    count = 0
-    my_each { |item| count += 1 if yield item } if block_given? && arg.nil?
-    my_each { |item| count += 1 if arg == item } if !block_given? && !arg.nil?
-    my_each { |_item| count += 1 } if !block_given? && arg.nil?
-    count
-  end
+    return my_select { |item| yield(item) }.length if block_given?
+    return my_select { |item| item == arg }.length unless arg.nil?
 
+    length
+  end
   def my_map(&block)
     result = []
     my_each { |item| result << block.call(item) }
@@ -75,11 +84,3 @@ end
 puts multiply_els([2, 3, 4])
 
 puts [2, 3, 4].inject(0) { |sum, item| sum + item }
-
-puts "Is  my_all? method meet the condition? : #{[2, 3, 4, 8, 34].my_all? { |item| item > 4 }}"
-
-puts "Is  my_all when no block_given? method the meet condition? : #{[true, nil, 4, 8, 34].my_all?}"
-
-puts "Is  my_any? method meet condition? : #{[2, 4, 5, 8, 12, 34].my_any? { |item| item == 12 }}"
-
-puts "Is  my_any when no block_given? method meet the condition? : #{[nil, nil, true, nil, nil].my_any?}"
