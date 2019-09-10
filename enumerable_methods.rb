@@ -79,7 +79,7 @@ module Enumerable
 end
 
 def multiply_els(array)
-  array.my_inject(1) { |prod, n| prod * n }
+  array.my_inject{ |prod, n| prod * n }
 end
 
 puts multiply_els([2, 3, 4])
