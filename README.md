@@ -11,8 +11,8 @@
 7. Create #my_inject
 8. Test your #my_inject by creating a method called #multiply_els which multiplies all the elements of the array together by using #my_inject, e.g. multiply_els([2,4,5]) #=> 40
 9. Modify your #my_map method to take a proc instead.
-##### using 
-* ruby
+##### language used
+* Ruby
 ###  Author 
 Salum Habibu https://github.com/IBUNHABIBU
 
