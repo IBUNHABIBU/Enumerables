@@ -46,13 +46,13 @@ module Enumerable
 
   def my_none?
     my_each do |item|
-      if block_given?
+        if block_given?
         return false if yield item
       else
         return false if item
       end
-      end
-      true
+    end
+    true
   end
 
   def my_count(arg = nil)
@@ -86,10 +86,8 @@ puts multiply_els([2, 3, 4])
 
 puts [2, 3, 4].inject(0) { |sum, item| sum + item }
 
-puts %w{ant bear cat}.my_none? { |word| word.length == 5 } #=> true
-puts %w{ant bear cat}.my_none? { |word| word.length >= 4 } #=> false
-# %w{ant bear cat}.my_none?(/d/)                        #=> true
-# [1, 3.14, 42].my_none?(Float)                         #=> false
+puts %w[ant bear cat].my_none? { |word| word.length == 5 } #=> true
+puts %w[ant bear cat].my_none? { |word| word.length >= 4 } #=> false
 puts [].my_none?                                           #=> true
 puts [nil].my_none?                                        #=> true
 puts [nil, false].my_none?                                 #=> true
