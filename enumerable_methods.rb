@@ -86,8 +86,6 @@ puts multiply_els([2, 3, 4])
 
 puts [2, 3, 4].inject(0) { |sum, item| sum + item }
 
-puts %w[ant bear cat].my_none? { |word| word.length == 5 } #=> true
-puts %w[ant bear cat].my_none? { |word| word.length >= 4 } #=> false
 puts [].my_none?                                           #=> true
 puts [nil].my_none?                                        #=> true
 puts [nil, false].my_none?                                 #=> true
