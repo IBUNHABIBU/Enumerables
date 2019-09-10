@@ -73,6 +73,7 @@ module Enumerable
     my_each { |item| result = yield(result, item) }
     result
   end
+  
 end
 weekdays = %w[monday tuesday wednesday thursday]
 weekdays.my_each { |day| puts day.upcase }
@@ -85,8 +86,4 @@ end
 puts multiply_els([2, 3, 4])
 
 puts [2, 3, 4].inject(0) { |sum, item| sum + item }
-
-puts [].my_none?                                           #=> true
-puts [nil].my_none?                                        #=> true
-puts [nil, false].my_none?                                 #=> true
-puts [nil, false, true].my_none?                           #=> false
+puts [5,6,7,8,9,10].my_inject{ |prod, n| prod * n }
