@@ -68,16 +68,15 @@ module Enumerable
     result
   end
 
-  def my_inject(init = 0)
-    result = init
-    my_each { |item| result = yield(result, item) }
-    result
+  def my_inject(item = nil)
+    total = item || self[0]
+    (1...length).each do |i|
+      total = yield(total, self[i])
+    end
+    total
   end
   
 end
-weekdays = %w[monday tuesday wednesday thursday]
-weekdays.my_each { |day| puts day.upcase }
-weekdays.my_each_with_index { |day, item| puts "#{item}.#{day.upcase}" }
 
 def multiply_els(array)
   array.my_inject(1) { |prod, n| prod * n }
