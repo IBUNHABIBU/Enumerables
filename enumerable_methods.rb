@@ -83,6 +83,3 @@ def multiply_els(array)
 end
 
 puts multiply_els([2, 3, 4])
-
-puts [2, 3, 4].inject(0) { |sum, item| sum + item }
-puts [5,6,7,8,9,10].my_inject{ |prod, n| prod * n }
