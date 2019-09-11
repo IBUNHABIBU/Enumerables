@@ -46,11 +46,7 @@ module Enumerable
 
   def my_none?
     my_each do |item|
-      if block_given?
-        return false if yield item
-      else
-        return false if item
-      end
+      return false if block_given? ? yield(item) : item
     end
     true
   end
