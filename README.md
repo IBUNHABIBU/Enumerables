@@ -40,3 +40,10 @@ Salum Habibu https://github.com/IBUNHABIBU
 [stars-url]: https://github.com/IBUNHABIBU/tic-tac-toe-game/stargazers
 [issues-shield]: https://img.shields.io/github/issues/IBUNHABIBU/tic-tac-toe-game.svg?style=flat-square
 [issues-url]: https://github.com/IBUNHABIBU/tic-tac-toe-game/issues
+
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
+
+
