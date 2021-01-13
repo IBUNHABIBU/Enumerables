@@ -12,6 +12,7 @@
   </a>
   </p>
    <h2 align="center"> ENUMERABLE METHOD</h2>
+   
 ## This is the project to implement user defined Enumerable methods
 1. Create #my_each, a method that is identical to #each but (obviously) does not use #each. You’ll need to remember the yield statement. Make sure it returns the same thing as #each as well.
 2. Create #my_each_with_index in the same way.
