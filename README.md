@@ -11,6 +11,7 @@
     <p align="center"> <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ruby/ruby.png" alt="Phaser" width="100" height="100"> </p>
   </a>
   </p>
+  
 ## This is the project to implement user defined Enumerable methods
 1. Create #my_each, a method that is identical to #each but (obviously) does not use #each. You’ll need to remember the yield statement. Make sure it returns the same thing as #each as well.
 2. Create #my_each_with_index in the same way.
