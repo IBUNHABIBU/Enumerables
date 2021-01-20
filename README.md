@@ -10,8 +10,14 @@
   <a href="git@github.com:IBUNHABIBU/platform-game.git">
     <p align="center"> <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ruby/ruby.png" alt="Phaser" width="100" height="100"> </p>
   </a>
-  </p>
+ 
    <h2 align="center"> ENUMERABLE METHOD</h2>
+   
+  <p align="center">
+    <a href="https://github.com/IBUNHABIBU/platform-game/issues">Report Bug</a>
+    <a href="https://github.com/IBUNHABIBU/platform-game/issues">Request Feature</a>
+  </p>
+ </p>
    
 ## This is the project to implement user defined Enumerable methods
 1. Create #my_each, a method that is identical to #each but (obviously) does not use #each. You’ll need to remember the yield statement. Make sure it returns the same thing as #each as well.
