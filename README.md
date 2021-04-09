@@ -34,10 +34,12 @@
 ##### language used
 * Ruby
 ###  Author 
-Salum Habibu https://github.com/IBUNHABIBU
 
-[ Live project ](https://repl.it/@IBUNHABIBU/Enumerables)
-
+👤 **Salum Habibu** 
+    
+* Github: [IBUNHABIBU](https://github.com/IBUNHABIBU)
+* Twitter: [@ibunhabibu](https://twitter.com/Ibunhabibu)
+* LinkedIn: [Salum Habibu Kombo](https://www.linkedin.com/in/salum-habibu/)
 
 [contributors-shield]: https://img.shields.io/github/contributors/IBUNHABIBU/Enumerables.svg?style=flat-square
 [contributors-url]: https://github.com/IBUNHABIBU/Enumerables/graphs/contributors
